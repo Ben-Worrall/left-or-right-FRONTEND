@@ -23,6 +23,7 @@
      background-color: rgb(255, 1, 200);
      color: white;
     border: 0.5vw solid rgb(74, 2, 77);
+    text-shadow: 2px 2px #ff0000
 }
 #LeaderboardButton:hover{
   
@@ -54,7 +55,8 @@
   background-color: rgb(255, 1, 200);
      color: white;
     border: 0.5vw solid rgb(74, 2, 77);
-  font-family: 'Courier New', monospace
+  font-family: 'Courier New', monospace;
+  text-shadow: 2px 2px #ff0000
 }
 #StartButton:hover{
   
