@@ -1,0 +1,79 @@
+#GameApp{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+#LeftOrRight-Text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 3vw;
+    font-family: cursive;
+    margin-top: 1%;
+}
+
+#PersonLeftHolder{
+    width: 45%;
+    height: 75%;
+    outline: 3px solid black;
+    margin-left: 2.5%;
+    margin-top: 5%;
+}
+
+#PersonRightHolder{
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 45%;
+    height: 75%;
+    outline: 3px solid black;
+}
+
+.PersonImage{
+    width: 100%;
+    height: 100%;
+}
+
+#Start-Game-Bnt{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: max-content;
+    height: max-content;
+    font-size: 5vw;
+    padding: 10px;
+    border-radius: 10px;
+    border: 0px;
+    z-index: 1005;
+    background-color: rgb(255, 1, 200);
+     color: white;
+    border: 0.5vw solid rgb(74, 2, 77);
+    font-family: cursive;
+  text-shadow: 2px 2px #ff0000
+}
+#Start-Game-Bnt:hover{
+    font-size: 4.9vw;
+  border-radius: 10px;
+  background-color: rgb(192, 4, 151);
+     color: rgb(238, 238, 238);
+    border: 0.4vw solid rgb(74, 2, 77);
+}
+
+
+#StartCover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.8;
+    z-index: 1004;
+}
