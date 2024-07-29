@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Game.css'
 import { isEditable } from '@testing-library/user-event/dist/utils';
-
+import { useNavigate } from "react-router-dom"
 
 
 
 const GameHTML = () => {
+  const navigate = useNavigate()
   var ImageLeft = document.getElementById('PersonLeft')
   var ImageRight = document.getElementById('PersonRight')
   var PersonNameLeft = document.getElementById('PersonLeftName')
@@ -302,6 +303,10 @@ const GameHTML = () => {
 function Restart(){
    window.location.reload()
 }
+function Home(){
+  navigate('/')
+  window.location.reload()
+}
 
 
 
@@ -316,7 +321,7 @@ function Restart(){
            
             <div id='LeftOrRight-Text' >Left or Right?</div>
             <button id='Home-BNT' style={{display:"none"}}></button>
-            <button id='Restart-BNT' style={{display:"none"}} onClick={Restart}></button>
+            
 
             
             <div id='PersonLeftName'></div>
@@ -324,6 +329,9 @@ function Restart(){
               <div id='text_for_instagram_left' style={{display:"none"}}>
                    <p id='Girl_name_left'></p>
                    <a id='Instagram_link_left' target="blank"></a>
+                   <button className='RestartButton' onClick={Restart}>⟳</button>
+                   <button className='HomeButton' onClick={Home}>Home</button>
+                   
               </div>
               <img className='PersonImage' id='PersonLeft' onClick={ImageClickLeft}></img>
               </div>
@@ -338,6 +346,8 @@ function Restart(){
               <div id='text_for_instagram_right' style={{display:"none"}}>
                    <p id='Girl_name_right'></p>
                    <a id='Instagram_link_right' target="blank"></a>
+                   <button className='RestartButton' onClick={Restart}>⟳</button>
+                   <button className='HomeButton' onClick={Home}>Home</button>
               </div>
               
               <img className='PersonImage' id='PersonRight' onClick={ImageClickRight}></img>
