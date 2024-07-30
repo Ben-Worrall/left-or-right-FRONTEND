@@ -14,6 +14,10 @@ const AppHTML = () => {
       navigate('/Game/Game')
       window.location.reload()
     }
+    function Leaderboard(){
+      navigate('/Leaderboard/Leaderboard')
+      window.location.reload()
+    }
 
 
   
@@ -25,7 +29,7 @@ const AppHTML = () => {
       
 
       <div id='Leaderboard'>
-        <button id='LeaderboardButton'>Leaderboard</button>
+        <button id='LeaderboardButton' onClick={Leaderboard}>Leaderboard</button>
       </div>
 
 

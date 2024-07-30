@@ -5,6 +5,7 @@ import {  BrowserRouter as Router,
 
   import AppHTML from "./Home";
   import GameHTML from "./Game/Game";
+  import LeaderboardHTML from "./Leaderboard/Leaderboard";
 
 function App() {
   
@@ -15,6 +16,7 @@ function App() {
 
           <Route exact path='/' element={<AppHTML/>} />
           <Route exact path='/Game/Game' element={<GameHTML/>} />
+          <Route exact path='/Leaderboard/Leaderboard' element={<LeaderboardHTML/>} />
          
           
 
