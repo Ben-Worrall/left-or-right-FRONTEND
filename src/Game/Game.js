@@ -31,7 +31,7 @@ const GameHTML = () => {
     useEffect(() => {
       
         
-        fetch('http://localhost:8081/api')
+        fetch('http://localhost:8081/api1')
         .then(res => res.json())
         .then(dataAR => setData(dataAR.message))
         .catch(err => console.log(err))

@@ -169,9 +169,12 @@
 
 #MainBody{
     height: 90%;
-    overflow-y: overlay;
-    overflow-x: hidden;
+    overflow-y: auto;
+    
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
     
 }
@@ -186,8 +189,8 @@
 
   #Position-Body{
     width: 15%;
-    outline: 1px solid black;
-    height: max-content;
+    
+    height: 100%;
     float: left;
     font-family: 'Courier New', Courier, monospace;
     font-size: 2vw;
@@ -195,33 +198,41 @@
   }
 #FullName-Body{
   width: 60%;
-  outline: 1px solid black;
-  height: max-content;
+  
+  height: 100%;
   float: left;
  
   
 }
 #Score-Body{
   width: 25%;
-  outline: 1px solid black;
-  height: max-content;
+  
+  height: 100%;
   float: right;
 }
 
 
 .Position{
   width: 100%;
-  border-bottom: 1px solid black;
+  outline: 1px solid black;
   height: 10%;
-  
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   font-family: 'Courier New', Courier, monospace;
   font-size: 2vw;
   font-weight: bold;
 }
 .FullName-Girl{
   width: 100%;
-  border-bottom: 1px solid black;
+  outline: 1px solid black;
   height: 10%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
   font-family: 'Courier New', Courier, monospace;
   font-size: 2vw;
@@ -229,10 +240,39 @@
 }
 .Score-Girl{
   width: 100%;
-  border-bottom: 1px solid black;
+  outline: 1px solid black;
   height: 10%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   
   font-family: 'Courier New', Courier, monospace;
   font-size: 2vw;
   font-weight: bold;
+}
+
+
+#GetResultsButton{
+  height: max-content;
+     width: max-content;
+     font-size: 5vw;
+     border-radius: 10px;
+     font-family: 'cursive';
+     background-color: rgb(255, 1, 200);
+     color: white;
+    border: 0.5vw solid rgb(74, 2, 77);
+    text-shadow: 2px 2px #ff0000;
+    position: absolute;
+    
+    
+}
+#GetResultsButton:hover{
+  
+  font-size: 5vw;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgb(192, 4, 151);
+  color: rgb(247, 247, 247);
+ border: 0.4vw solid rgb(74, 2, 77);
 }
