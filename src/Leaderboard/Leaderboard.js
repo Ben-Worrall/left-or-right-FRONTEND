@@ -37,7 +37,7 @@ const LeaderboardHTML = () => {
 
     //sort the array depending on the score
     dataAR.sort((a, b) => b.cur_score - a.cur_score)
-    console.log(dataAR)
+    //console.log(dataAR)
 
     //loop through and for every element append to main body
     for(let i = 0; i < dataAR.length; i++){
@@ -74,6 +74,54 @@ const LeaderboardHTML = () => {
 
 
 
+  //SEARCH BAR FUNCTION
+
+  function SearchBar(e){
+       //console.log(e.currentTarget.value)
+       let curInputValue = e.currentTarget.value
+       let curInputValueLENGTH = curInputValue.length
+
+       for(let i = 0; i < dataAR.length; i++){ 
+          let GirlName = dataAR[i].full_name
+          let GirlNameMaxSTRING = GirlName.slice(0, curInputValueLENGTH)
+        
+          if(GirlNameMaxSTRING.toLowerCase() == curInputValue.toLowerCase() && curInputValue !== ""){
+
+                //console.log('yes')
+                //search through all elements and find one that matches the name
+                var elements = document.getElementById('FullName-Body').children;
+                for(let k = 0; k < elements.length; k++){
+                    let cur_girl_name = elements[k].innerText.slice(0,curInputValueLENGTH)
+                    if(cur_girl_name.toLowerCase() == GirlNameMaxSTRING.toLowerCase()){
+                        elements[k].scrollIntoView()
+
+                        //highlight girl
+                        setTimeout(function () {
+                            elements[k].style.backgroundColor = "yellow"
+                            
+                          },0)
+
+
+                          setTimeout(function() {    
+                             elements[k].style.backgroundColor = "white"
+                          }, 500);
+                        
+                        
+                          
+                        
+
+                        return
+                    }
+                }
+
+                return
+          }
+
+
+       }
+
+  }
+
 
 
 
@@ -90,7 +138,7 @@ const LeaderboardHTML = () => {
               
             <div id='SearchBar'>
                <div id='Left-NavBar'>
-                   <input id='SearchBar-Input'  placeholder="Search.."></input>
+                   <input id='SearchBar-Input'  placeholder="Search.." onInput={SearchBar}></input>
                    <button type='submit' id='SubmitSearch'>🔍</button>
                   
                </div>
