@@ -81,18 +81,14 @@ const LeaderboardHTML = () => {
        let curInputValue = e.currentTarget.value
        let curInputValueLENGTH = curInputValue.length
 
-       for(let i = 0; i < dataAR.length; i++){ 
-          let GirlName = dataAR[i].full_name
-          let GirlNameMaxSTRING = GirlName.slice(0, curInputValueLENGTH)
-        
-          if(GirlNameMaxSTRING.toLowerCase() == curInputValue.toLowerCase() && curInputValue !== ""){
+       
 
                 //console.log('yes')
                 //search through all elements and find one that matches the name
                 var elements = document.getElementById('FullName-Body').children;
                 for(let k = 0; k < elements.length; k++){
-                    let cur_girl_name = elements[k].innerText.slice(0,curInputValueLENGTH)
-                    if(cur_girl_name.toLowerCase() == GirlNameMaxSTRING.toLowerCase()){
+                    let cur_girl_name = elements[k].innerText
+                    if(cur_girl_name.toLowerCase().includes(curInputValue.toLowerCase()) && curInputValue !== ""){
                         elements[k].scrollIntoView()
 
                         //highlight girl
@@ -115,10 +111,7 @@ const LeaderboardHTML = () => {
                 }
 
                 return
-          }
-
-
-       }
+          
 
   }
 
