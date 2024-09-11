@@ -26,6 +26,14 @@ const LeaderboardHTML = () => {
       }, []);
 
 
+      //show image of girl
+      function ShowImage(e){
+          console.log(e.currentTarget.alt)
+          document.getElementById('image').src = require(`../assets/${e.currentTarget.alt}.jpg`)
+          document.getElementById('ShowImage').style.display = ""
+          document.getElementById('ShowImageBackground').style.display = ""
+      }
+
 
   var navigate = useNavigate()
     //get results
@@ -43,12 +51,18 @@ const LeaderboardHTML = () => {
     for(let i = 0; i < dataAR.length; i++){
         
         let CurGirl = dataAR[i]
-        console.log(i, CurGirl.full_name)
+        //console.log(i, CurGirl.full_name)
 
         //position
         let position = document.createElement('div')
         position.className = "Position"
         position.innerText = i+1
+        //girl's image
+        let img = document.createElement('button')
+        img.className = "IMG"
+        img.innerText = "Image"
+        img.alt = CurGirl.full_name
+        img.onclick = ShowImage
         //girl's name
         let name = document.createElement('div')
         name.className = "FullName-Girl"
@@ -60,6 +74,7 @@ const LeaderboardHTML = () => {
 
         //append them all
         document.getElementById('Position-Body').appendChild(position)
+        document.getElementById('IMG-Body').appendChild(img)
         document.getElementById('FullName-Body').appendChild(name)
         document.getElementById('Score-Body').appendChild(score)
 
@@ -116,7 +131,11 @@ const LeaderboardHTML = () => {
   }
 
 
-
+  //close image function
+  function CloseImage(){
+    document.getElementById('ShowImage').style.display = "none"
+    document.getElementById('ShowImageBackground').style.display = "none"
+  }
 
 
 
@@ -128,6 +147,11 @@ const LeaderboardHTML = () => {
     return(
  
         <div id='Leaderboard-App'>
+
+            <div id='ShowImage' style={{display:'none'}}>
+                <img id='image'></img>
+            </div>
+            <div id='ShowImageBackground' onClick={CloseImage} style={{display:'none'}}></div>
               
             <div id='SearchBar'>
                <div id='Left-NavBar'>
@@ -149,6 +173,7 @@ const LeaderboardHTML = () => {
 
                 <div id='StickyOverlayLB'>
                     <div id='Position-StickyOverlayLB'>Place</div>
+                    <div id='IMG-StickyOverlayLB'>IMG</div>
                     <div id='FullName-StickyOverlayLB'>Full Name</div>
                     <div id='Score-StickyOverlayLB'>Score</div>
                 </div>
@@ -156,6 +181,9 @@ const LeaderboardHTML = () => {
                 <div id='MainBody'>
                     <button id='GetResultsButton' onClick={GetResults}>Get Results</button>
                     <div id='Position-Body'>
+                        
+                    </div>
+                    <div id='IMG-Body'>
                         
                     </div>
                     <div id='FullName-Body'>

@@ -1,8 +1,33 @@
 #Leaderboard-App{
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-image: linear-gradient(rgb(51, 132, 255), rgb(4, 0, 255))
 } 
+
+#ShowImage{
+   width: 45%;
+   height: 85%;
+   position: absolute;
+   z-index: 1010;
+}
+#image{
+  width: 100%;
+  height: 100%;
+}
+#ShowImageBackground{
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1009;
+}
+
+
+
+
 
 #SearchBar{
     background-color: rgba(0, 0, 0, 0.0);
@@ -10,7 +35,7 @@
    width: 90%;
    position: absolute;
    top: 0;
-   margin-left: 5%;
+   
    margin-top: 2.5%;
    display: flex;
    align-items: center;
@@ -147,6 +172,15 @@
     justify-content: center;
     font-size: 3vw;
 }
+#IMG-StickyOverlayLB{
+  width: 15%;
+  outline: 1px solid black;
+      height: 100%;
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3vw;
+}
 #FullName-StickyOverlayLB{
       width: 60%;
       outline: 1px solid black;
@@ -197,6 +231,15 @@
     font-size: 2vw;
     font-weight: bold;
   }
+  #IMG-Body{
+    width: 15%;
+    
+    height: 100%;
+    float: left;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2vw;
+    font-weight: bold;
+  }
 #FullName-Body{
   width: 60%;
   
@@ -214,6 +257,19 @@
 
 
 .Position{
+  width: 100%;
+  outline: 1px solid black;
+  height: 10%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 2vw;
+  font-weight: bold;
+}
+.IMG{
   width: 100%;
   outline: 1px solid black;
   height: 10%;
