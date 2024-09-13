@@ -16,7 +16,7 @@ const LeaderboardHTML = () => {
     useEffect(() => {
       
         
-        fetch('http://localhost:8081/api2')
+        fetch('https://left-or-right-backend.vercel.app/api2')
         .then(res => res.json())
         .then(dataAR => setData(dataAR.message))
         .catch(err => console.log(err))

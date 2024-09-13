@@ -31,7 +31,7 @@ const GameHTML = () => {
     useEffect(() => {
       
         
-        fetch('http://localhost:8081/api1')
+        fetch('https://left-or-right-backend.vercel.app/api1')
         .then(res => res.json())
         .then(dataAR => setData(dataAR.message))
         .catch(err => console.log(err))
@@ -253,7 +253,7 @@ const GameHTML = () => {
              try{
               console.log('try send to db')
              
-              const res = await fetch('http://localhost:8081/api/data', {
+              const res = await fetch('https://left-or-right-backend.vercel.app/api/data', {
                 method: 'POST',
                 headers: {
                   'Content-Type': 'application/json',
