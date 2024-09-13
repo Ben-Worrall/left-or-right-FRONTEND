@@ -28,7 +28,7 @@ const GameHTML = () => {
     var [data] = useState(" ")
   const [response, setResponse] = useState(null);
   
-    /*useEffect(() => {
+    useEffect(() => {
       
         
         fetch('https://left-or-right-backend.vercel.app/api1')
@@ -39,7 +39,7 @@ const GameHTML = () => {
 
 
         
-      }, []); */
+      }, []); 
 
       
       //when user presses start button, initialies the array of iamges and start
